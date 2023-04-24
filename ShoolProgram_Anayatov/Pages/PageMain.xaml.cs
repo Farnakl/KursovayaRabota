@@ -33,7 +33,6 @@ namespace ShoolProgram_Anayatov.Pages
             InitializeComponent();
 
 
-            Connection.DBConnect.Operation.ToList();
 
             SeriesCollection = new SeriesCollection
 
