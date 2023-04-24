@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\student\Documents\anayatov\ShoolProgram_Anayatov\ShoolProgram_Anayatov\obj\Debug\
+C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\
 ShoolProgram_Anayatov
 none
 false
 DEBUG;TRACE
-C:\Users\student\Documents\anayatov\ShoolProgram_Anayatov\ShoolProgram_Anayatov\App.xaml
-12513427146
+C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\App.xaml
+15869493173
 21661074417
-34998924176
-153-1332827987
-MainWindow.xaml;Pages\AddInfoPages\PageAddOperation.xaml;Pages\EditInfoPages\PageEditOperation.xaml;Pages\Menus\PageMenu.xaml;Pages\PageEditProviders.xaml;Pages\PageEditStudent.xaml;Pages\PageLogin.xaml;Pages\PageMain.xaml;Pages\PageProviders.xaml;Pages\PageTable.xaml;Pages\PageTableProgress.xaml;Pages\PageTableTeachers.xaml;
+37-991404331
+162-1868250999
+MainWindow.xaml;Pages\AddInfoPages\PageAddEmployees.xaml;Pages\AddInfoPages\PageAddOperation.xaml;Pages\EditInfoPages\PageEditOperation.xaml;Pages\EditInfoPages\PageEditProvider.xaml;Pages\Menus\PageMenu.xaml;Pages\PageShowProviders.xaml;Pages\PageEditStudent.xaml;Pages\PageLogin.xaml;Pages\PageMain.xaml;Pages\PageProviders.xaml;Pages\PageTable.xaml;Pages\PageTableProgress.xaml;Pages\PageTableTeachers.xaml;Pages\ShowProviderInfo.xaml;
 
 False
 

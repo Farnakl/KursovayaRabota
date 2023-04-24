@@ -1,5 +1,6 @@
 ﻿using ShoolProgram_Anayatov.Classes;
 using ShoolProgram_Anayatov.Modeks;
+using ShoolProgram_Anayatov.Pages.EditInfoPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -84,12 +85,17 @@ namespace ShoolProgram_Anayatov.Pages
 
         private void BtnShowInfoProviders_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.frameView.Navigate(new PageEditProviders((sender as Button).DataContext as Provider));
+            Navigation.frameView.Navigate(new ShowProviderInfo((sender as Button).DataContext as Provider));
         }
 
         private void TxbSearch_GotFocus(object sender, RoutedEventArgs e)
         {
             TxbSearch.Text = "";
+        }
+
+        private void BtnEditInfo_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.frameView.Navigate(new PageEditProvider((sender as Button).DataContext as Provider));
         }
     }
 }

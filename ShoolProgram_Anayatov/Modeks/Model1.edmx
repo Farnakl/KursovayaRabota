@@ -69,7 +69,7 @@
           <Property Name="CheckingAccount" Type="nvarchar" MaxLength="50" />
           <Property Name="TIN" Type="nvarchar" MaxLength="50" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
-          <Property Name="PurchaseDate" Type="date" />
+          <Property Name="PurchaseDate" Type="datetime" />
           <Property Name="idStatusProvider" Type="int" />
         </EntityType>
         <EntityType Name="StatusProvider">
@@ -322,7 +322,7 @@
           <Property Name="CheckingAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PurchaseDate" Type="DateTime" Precision="0" />
+          <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Product" Relationship="Self.FK_Product_Provider" FromRole="Provider" ToRole="Product" />
           <Property Name="idStatusProvider" Type="Int32" />
           <NavigationProperty Name="StatusProvider" Relationship="Anayatov_magazineModel.FK_Provider_StatusProvider" FromRole="Provider" ToRole="StatusProvider" />

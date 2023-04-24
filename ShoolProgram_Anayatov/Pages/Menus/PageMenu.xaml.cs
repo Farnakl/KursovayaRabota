@@ -45,5 +45,10 @@ namespace ShoolProgram_Anayatov.Pages.Menus
         {
             Navigation.frameView.Navigate(new PageProviders());
         }
+
+        private void BtnAnaliz_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.frameView.Navigate(new PageMain());
+        }
     }
 }

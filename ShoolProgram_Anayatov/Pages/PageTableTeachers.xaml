@@ -32,9 +32,9 @@
                 Click="BtnSearch_Click" Height="32"/>
         
         <Button Width="180"
-                Content="sdelat!"
+                Content="Добавить сотрудника"
                 Name="BtnAdd"
-                Background="red"
+           
                 Margin="130,0,0,0"
                  HorizontalAlignment="Right"
                    VerticalAlignment="Center"
@@ -79,21 +79,29 @@
                 <DataGridTemplateColumn Width="75">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel>
+                            <StackPanel Orientation="Horizontal">
                                 <Button Name="BtnShowInfo"
-                                
                                     Click="BtnShowInfo_Click"
                                     Content="..."
                                         BorderBrush="Transparent"
                                        Background="Transparent"
                                     Foreground="Gray"
                                    />
+
+                                <Button Name="BtnEditInfo"
+                                    Click="BtnEditInfo_Click"
+                                    Foreground="Transparent"
+                                        Background="Transparent"
+                                        BorderBrush="Transparent">
+                                    <Image Source="./Resource/Gears.png"/>
+                                </Button>
+                                
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Width="100">
+                <DataGridTemplateColumn Width="75">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
@@ -102,7 +110,6 @@
                                     Click="BtnDelete_Click"
                                     Background="Transparent"
                                     Content="X"
-                                    
                                     Foreground="Red"
                                    />
                             </StackPanel>

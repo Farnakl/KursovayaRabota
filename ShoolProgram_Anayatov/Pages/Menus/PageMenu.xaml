@@ -10,6 +10,12 @@
 
     <Grid>
         <StackPanel Margin="3">
+
+            <Button 
+                    Name="BtnAnaliz"
+                    Click="BtnAnaliz_Click"
+                    Content= "Анализ"
+                    ></Button>
             <Button
                 Margin="0 10 0 10" 
                 Name="GoToGridPage"  

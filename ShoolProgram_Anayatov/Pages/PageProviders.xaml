@@ -71,10 +71,11 @@
                             Binding="{Binding StatusProvider.Name}"
                             Width="*"/>
 
-                <DataGridTemplateColumn Width="75">
+                <DataGridTemplateColumn Width="115">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+
                                 <Button Name="BtnShowInfoProviders"
                                 
                                     Click="BtnShowInfoProviders_Click"
@@ -83,12 +84,22 @@
                                        Background="Transparent"
                                     Foreground="Gray"
                                    />
+
+                                <Button Name="BtnEditInfo"
+                                    Click="BtnEditInfo_Click"
+                                    Foreground="Transparent"
+                                        Background="Transparent"
+                                        BorderBrush="Transparent">
+                                    
+                                    <Image Source="./Resource/Gears.png"/>
+                                </Button>
+                                
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Width="100">
+                <DataGridTemplateColumn Width="75">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
@@ -97,7 +108,7 @@
                                     Click="BtnDelete_Click"
                                     Background="Transparent"
                                     Content="X"
-                                    
+                                    HorizontalAlignment="Left"
                                     Foreground="Red"
                                    />
                             </StackPanel>

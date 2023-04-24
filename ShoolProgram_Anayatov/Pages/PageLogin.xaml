@@ -11,6 +11,7 @@
     <Grid>
         <Image VerticalAlignment="Top" 
                Height="125"
+               Margin="0,50,0,0"
             Source = "./Resource/VkusVill_textlogo.png"/>
         
             

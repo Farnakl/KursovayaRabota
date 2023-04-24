@@ -86,7 +86,7 @@
                                     Foreground="Transparent"
                                         Background="Transparent"
                                         BorderBrush="Transparent">
-                                    <Image Source="./Resource/kluch.png"/>
+                                    <Image Source="./Resource/Gears.png"/>
                                 </Button>
                                 
                                 <Button Name="BtnDelete"
