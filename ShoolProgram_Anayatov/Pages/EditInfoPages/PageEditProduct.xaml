@@ -1,4 +1,4 @@
-﻿<Page x:Class="ShoolProgram_Anayatov.Pages.EditInfoPages.PageEditOperation"
+﻿<Page x:Class="ShoolProgram_Anayatov.Pages.EditInfoPages.PageEditProduct"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ShoolProgram_Anayatov.Pages.EditInfoPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Изменение операции">
+      Title="PageEditProduct">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -21,31 +21,41 @@
                     Name="StFormView">
 
                 <GroupBox Width="300" 
-                          Header="Продукт:">
+                          Header="Поставщик:">
                     <ComboBox 
-                            Name="CmbProduct"
+                            Name="CmbProvider"
                             FontSize="20"/>
                 </GroupBox>
 
 
-                <GroupBox Width="300" Header="Количество:">
+                <GroupBox Width="300" Header="Название организации:">
                     <TextBox 
-                            Name="TxbQuantity"
+                            Name="TxbNameProduct"
                             FontSize="20"/>
                 </GroupBox>
 
+                <GroupBox Width="300" Header="Единица измерения">
+                    <TextBox 
+                            Name="TxbUnit"
+                            FontSize="20"/>
+                </GroupBox>
 
             </StackPanel>
 
             <StackPanel Name="StFormEdit">
-                <GroupBox Width="300" Header= "Обслуживающий сотрудник:">
+                <GroupBox Width="300" Header= "Тип продукта:">
                     <ComboBox 
-                            Name="CmbEmployeers"
+                            Name="CmbTypeOfProduct"
                             FontSize="20"/>
                 </GroupBox>
-                <GroupBox Width="300" Header="Дата продажи">
-                    <DatePicker 
-                            Name="DatPurchase"
+                <GroupBox Width="300" Header="Количество покупки">
+                    <TextBox 
+                            Name="TxbPurchaseVolue"
+                            FontSize="20"/>
+                </GroupBox>
+                <GroupBox Width="300" Header="Цена покупки">
+                    <TextBox 
+                            Name="TxbPurchasePrice"
                             FontSize="20"/>
                 </GroupBox>
 

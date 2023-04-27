@@ -248,6 +248,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\EditInfoPages\PageEditProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EditInfoPages\PageEditProvider.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -354,6 +358,9 @@
     </Compile>
     <Compile Include="Pages\EditInfoPages\PageEditOperation.xaml.cs">
       <DependentUpon>PageEditOperation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditInfoPages\PageEditProduct.xaml.cs">
+      <DependentUpon>PageEditProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\EditInfoPages\PageEditProvider.xaml.cs">
       <DependentUpon>PageEditProvider.xaml</DependentUpon>

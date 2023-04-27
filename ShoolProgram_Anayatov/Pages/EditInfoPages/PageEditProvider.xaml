@@ -28,14 +28,14 @@
 
                 <GroupBox Width="300" 
                           Header="Название предприятия:">
-                    <TextBlock 
+                    <TextBox 
                             Name="TxbName"
                             FontSize="20"/>
                 </GroupBox>
 
 
                 <GroupBox Width="300" Header="Адрес:">
-                    <TextBlock 
+                    <TextBox 
                             Name="TxbAddress"
                             FontSize="20"/>
                 </GroupBox>
@@ -43,7 +43,7 @@
 
                 <GroupBox Width="300" 
                           Header="Банковский счёт:">
-                    <TextBlock 
+                    <TextBox 
                             Name="TxbBankAccont"
                             FontSize="20"/>
                 </GroupBox>
@@ -58,19 +58,19 @@
                             FontSize="20"/>
                 </GroupBox>
                 <GroupBox Width="300" Header="Телефон:">
-                    <TextBlock
+                    <TextBox
                             Name="TxbTelephone"
                             FontSize="20"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Header= "Email:">
-                    <TextBlock 
+                    <TextBox
                             Name="TxbEmail"
                             FontSize="20"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Header="ИНН:">
-                    <TextBlock 
+                    <TextBox 
                             Name="TxbINN"
                             FontSize="20"/>
                 </GroupBox>

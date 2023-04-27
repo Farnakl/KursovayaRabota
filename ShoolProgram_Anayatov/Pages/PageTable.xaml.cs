@@ -1,5 +1,6 @@
 ﻿using ShoolProgram_Anayatov.Classes;
 using ShoolProgram_Anayatov.Modeks;
+using ShoolProgram_Anayatov.Pages.EditInfoPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -114,6 +115,16 @@ namespace ShoolProgram_Anayatov.Pages
         }
 
         private void DataGridProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void BtnEditInfo_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.frameView.Navigate(new PageEditProduct((sender as Button).DataContext as Product));
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
 
         }
