@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace ShoolProgram_Anayatov.Pages.EditInfoPages
 {
@@ -22,12 +23,10 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
     /// </summary>
     public partial class PageEditProvider : Page
     {
-        private int providerId;
-
+        private int providerId;  
         public PageEditProvider(Provider provider)
         {
             InitializeComponent();
-            DatDatePurchase.Text = provider.PurchaseDate.ToString();
 
             TxbBankAccont.Text = provider.CheckingAccount.ToString();
             TxbEmail.Text = provider.Email.ToString();
@@ -41,6 +40,9 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
             CmbStatusProvider.ItemsSource = Connection.DBConnect.StatusProvider.ToList();
             CmbStatusProvider.Text = provider.StatusProvider.Name.ToString();
 
+            DatDatePurchase.Text = provider.PurchaseDate.ToString();
+
+            providerId = provider.id;
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
@@ -58,7 +60,6 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
                 Anayatov_magazineEntities2 context = new Anayatov_magazineEntities2();
                 var provider = context.Provider.Where(c => c.id == providerId).FirstOrDefault();
 
-                provider.PurchaseDate = DateTime.Parse(DatDatePurchase.Text);
                 provider.Telephone = TxbTelephone.Text;
                 provider.TIN = TxbINN.Text;
                 provider.Address = TxbAddress.Text;
@@ -66,9 +67,9 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
                 provider.Name = TxbName.Text;
                 provider.CheckingAccount = TxbBankAccont.Text;
                 provider.idStatusProvider = (CmbStatusProvider.SelectedItem as StatusProvider).id;
+                provider.PurchaseDate = DateTime.Parse(DatDatePurchase.Text);
 
                 context.SaveChanges();
-
                 MessageBox.Show("Данные успешно изменены!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 Navigation.frameView.GoBack();

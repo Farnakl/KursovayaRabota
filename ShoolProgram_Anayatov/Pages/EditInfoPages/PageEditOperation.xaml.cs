@@ -70,8 +70,7 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
                     operation.idEmployees = (CmbEmployeers.SelectedItem as Employees).id;
                     
                     context.SaveChanges();
-                    MessageBox.Show("Данные успешно изменены!",
-                            "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Данные успешно изменены!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                
                     Navigation.frameView.GoBack();
                 
