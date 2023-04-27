@@ -83,18 +83,14 @@
                 
 
                 <GroupBox Width="250" Header="Образование:">
-                    <TextBox
-                            Name="TxbEducation"
+                    <ComboBox
+                            Name="CmbEducation"
                             FontSize="20"/>
                 </GroupBox>
 
 
 
-                <GroupBox Width="250" Header="Специальность:">
-                    <TextBox
-                            Name="TxbSpeciality"
-                            FontSize="20"/>
-                </GroupBox>
+                
 
             </StackPanel>
         </StackPanel>

@@ -57,7 +57,7 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
             else
             {
 
-                Anayatov_magazineEntities2 context = new Anayatov_magazineEntities2();
+                Anayatov_magazineEntities3 context = new Anayatov_magazineEntities3();
                 var provider = context.Provider.Where(c => c.id == providerId).FirstOrDefault();
 
                 provider.Telephone = TxbTelephone.Text;

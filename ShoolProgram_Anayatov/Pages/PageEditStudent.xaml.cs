@@ -30,9 +30,9 @@ namespace ShoolProgram_Anayatov.Pages
             TxbAddresReg.Text = employees.RegistrationAddress.ToString();
             TxbINN.Text = employees.TIN.ToString();
             TxbPassport.Text = employees.Passport.ToString();
-            TxbFamilyStatus.Text = employees.FamilyStatus1.Name.ToString();
-            TxbEducation.Text = employees.Education.ToString();
-            TxbSpeciality.Text = employees.Speciality.ToString();
+            TxbFamilyStatus.Text = employees.FamilyStatus.Name.ToString();
+            TxbEducation.Text = employees.Education.EducationName.ToString();
+       
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

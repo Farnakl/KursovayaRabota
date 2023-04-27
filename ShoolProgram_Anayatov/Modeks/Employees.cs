@@ -29,13 +29,14 @@ namespace ShoolProgram_Anayatov.Modeks
         public string Telephone { get; set; }
         public string TIN { get; set; }
         public string Passport { get; set; }
-        public string Education { get; set; }
+        public int idFamilyStatus { get; set; }
+        public int idEducation { get; set; }
         public string Speciality { get; set; }
-        public Nullable<int> idFamilyStatus { get; set; }
     
+        public virtual Education Education { get; set; }
+        public virtual FamilyStatus FamilyStatus { get; set; }
         public virtual JobTitle JobTitle { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Operation> Operation { get; set; }
-        public virtual FamilyStatus FamilyStatus1 { get; set; }
     }
 }

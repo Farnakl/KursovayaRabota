@@ -419,3 +419,5 @@ C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\De
 C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\Pages\EditInfoPages\PageEditProvider.baml
 C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\Pages\PageShowProviders.baml
 C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\Pages\ShowProviderInfo.baml
+C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\Pages\EditInfoPages\PageEditEmployees.g.cs
+C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\Pages\EditInfoPages\PageEditEmployees.baml

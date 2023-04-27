@@ -33,6 +33,10 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPages
             CmbFamilyStatus.DisplayMemberPath = "Name";
             CmbFamilyStatus.SelectedValuePath = "id";
             CmbFamilyStatus.ItemsSource = Connection.DBConnect.FamilyStatus.ToList();
+
+            CmbEducation.DisplayMemberPath = "EducationName";
+            CmbEducation.SelectedValuePath = "id";
+            CmbEducation.ItemsSource = Connection.DBConnect.Education.ToList();
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -44,8 +48,8 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPages
         {
 
             if (TxbName.Text == "" || CmbFamilyStatus.Text == "" || CmbJobTitle.Text == "" ||
-                DatOfBirth.Text == "" || TxbEducation.Text == "" || TxbPassport.Text == "" ||
-                TxbRegAddres.Text == "" || TxbResAddres.Text == "" || TxbSpeciality.Text == ""
+                DatOfBirth.Text == "" || CmbEducation.Text == "" || TxbPassport.Text == "" ||
+                TxbRegAddres.Text == "" || TxbResAddres.Text == ""
                 || TxbTelephone.Text == "" || TxbTIN.Text == "" )
             {
                 MessageBox.Show("Поля пусты", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -58,15 +62,14 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPages
                     Employees employees = new Employees()
                     {
                         JobTitle = CmbJobTitle.SelectedItem as JobTitle,
-                        FamilyStatus1 = CmbFamilyStatus.SelectedItem as FamilyStatus,
+                        FamilyStatus = CmbFamilyStatus.SelectedItem as FamilyStatus,
                         Name = TxbName.Text,
                         DateOfBirth = DateTime.Parse(DatOfBirth.Text),
                         TIN= TxbTIN.Text,
-                        Education = TxbEducation.Text,
+                        Education = CmbEducation.SelectedItem as Education,
                         Passport = TxbPassport.Text,
                         RegistrationAddress= TxbRegAddres.Text,
                         ResidentialAddress= TxbResAddres.Text,
-                        Speciality = TxbSpeciality.Text,
                         Telephone = TxbTelephone.Text,
 
                     };
