@@ -17,10 +17,10 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center" >
 
-            <StackPanel  Margin="0,0,5,0"
+            <StackPanel 
                     Name="StFormView">
 
-                <GroupBox Width="300" 
+                <GroupBox Width="250" 
                           Header="Должность:">
                     <ComboBox 
                             Name="CmbJobTitle"
@@ -28,26 +28,69 @@
                 </GroupBox>
 
 
-                <GroupBox Width="300" Header="ФИО:">
-                    <TextBlock 
+                <GroupBox Width="250" Header="ФИО:">
+                    <TextBox
                             Name="TxbName"
                             FontSize="20"/>
                 </GroupBox>
 
+                <GroupBox Width="250" Header="Телефон:">
+                    <TextBox
+                            Name="TxbTelephone"
+                            FontSize="20"/>
+                </GroupBox>
+
+                <GroupBox Width="250" Header="ИНН:">
+                    <TextBox
+                            Name="TxbTIN"
+                            FontSize="20"/>
+                </GroupBox>
 
             </StackPanel>
 
-            <StackPanel Name="StFormEdit">
-                <GroupBox Width="300" Header= "Семейное положение:">
+            <StackPanel Name="StFormEdit"  Margin="5,0,5,0">
+                <GroupBox Width="250" Header= "Семейное положение:">
                     <ComboBox 
                             Name="CmbFamilyStatus"
                             FontSize="20"/>
                 </GroupBox>
-                <GroupBox Width="300" Header="Дата рождения">
+                <GroupBox Width="250" Header="Дата рождения">
                     <DatePicker 
-                            Name="DatofBirth"
+                            Name="DatOfBirth"
                             FontSize="20"/>
                 </GroupBox>
+
+                <GroupBox Width="250" Header="Адрес проживание:">
+                    <TextBox
+                            Name="TxbResAddres"
+                            FontSize="20"/>
+                </GroupBox>
+
+                <GroupBox Width="250" Header="Адрес регистрации:">
+                    <TextBox
+                            Name="TxbRegAddres"
+                            FontSize="20"/>
+                </GroupBox>
+
+            </StackPanel>
+
+            <StackPanel  Name="StFormAdd">
+                <GroupBox Width="250" Header="Паспорт:">
+                    <TextBox
+                            Name="TxbPassport"
+                            FontSize="20"/>
+                </GroupBox>
+
+
+                <GroupBox Width="250" Header="Образование:">
+                    <ComboBox
+                            Name="CmbEducation"
+                            FontSize="20"/>
+                </GroupBox>
+
+
+
+
 
             </StackPanel>
         </StackPanel>
@@ -65,7 +108,9 @@
                     HorizontalAlignment="Center"
                     Name="BtnEdit"
                     Click="BtnEdit_Click"
-                    Content="Изменить"/>
+                    Content="Добавить"/>
+
+
         </StackPanel>
     </Grid>
 </Page>

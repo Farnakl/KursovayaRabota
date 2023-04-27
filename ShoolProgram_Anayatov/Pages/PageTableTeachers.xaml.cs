@@ -1,6 +1,7 @@
 ﻿using ShoolProgram_Anayatov.Classes;
 using ShoolProgram_Anayatov.Modeks;
 using ShoolProgram_Anayatov.Pages.AddInfoPages;
+using ShoolProgram_Anayatov.Pages.EditInfoPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -112,7 +113,7 @@ namespace ShoolProgram_Anayatov.Pages
 
         private void BtnEditInfo_Click(object sender, RoutedEventArgs e)
         {
-
+            Navigation.frameView.Navigate(new PageEditEmployees((sender as Button).DataContext as Employees));
         }
     }
 
