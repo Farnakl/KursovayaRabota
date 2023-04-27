@@ -236,6 +236,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AddInfoPages\PageAddProviders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EditInfoPages\PageEditEmployees.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -342,6 +346,9 @@
     <Compile Include="Pages\AddInfoPages\PageAddOperation.xaml.cs">
       <DependentUpon>PageAddOperation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AddInfoPages\PageAddProviders.xaml.cs">
+      <DependentUpon>PageAddProviders.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EditInfoPages\PageEditEmployees.xaml.cs">
       <DependentUpon>PageEditEmployees.xaml</DependentUpon>
     </Compile>
@@ -435,6 +442,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\iconVkusvil.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets')" />

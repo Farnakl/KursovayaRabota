@@ -1,5 +1,6 @@
 ﻿using ShoolProgram_Anayatov.Classes;
 using ShoolProgram_Anayatov.Modeks;
+using ShoolProgram_Anayatov.Pages.AddInfoPages;
 using ShoolProgram_Anayatov.Pages.EditInfoPages;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Xceed.Wpf.AvalonDock.Controls;
 
 namespace ShoolProgram_Anayatov.Pages
 {
@@ -96,6 +98,11 @@ namespace ShoolProgram_Anayatov.Pages
         private void BtnEditInfo_Click(object sender, RoutedEventArgs e)
         {
             Navigation.frameView.Navigate(new PageEditProvider((sender as Button).DataContext as Provider));
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.frameView.Navigate(new PageAddProviders());
         }
     }
 }

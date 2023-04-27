@@ -45,6 +45,7 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPage
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
+                
             if (TxbQuantity.Text == "" || CmbProduct.Text == "" || CmbEmployeers.Text == "" ||
                 DatPurchase.Text == "")
             {
@@ -53,7 +54,6 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPage
             }
             else
             { 
-                
                     try
                     {
                         Operation operation = new Operation()

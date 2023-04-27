@@ -32,7 +32,13 @@
                    VerticalAlignment="Center"
                 Click="BtnSearch_Click" Height="32"/>
 
-
+        <Button Width="178"
+                Content="Добавить поставщика"
+                Name="BtnAdd"
+                Margin="130,0,0,0"
+                 HorizontalAlignment="Right"
+                   VerticalAlignment="Center"
+                Click="BtnAdd_Click" Height="32"/>
 
         <DataGrid
                     Margin="0,0,0,45"
