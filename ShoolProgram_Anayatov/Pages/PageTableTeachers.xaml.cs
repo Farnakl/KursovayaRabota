@@ -57,10 +57,10 @@ namespace ShoolProgram_Anayatov.Pages
                 {
                     string searchString = TxbSearch.Text.ToLower();
 
-                    var itemsList = Connection.DBConnect.Operation.ToList();
+                    var itemsList = Connection.DBConnect.Employees.ToList();
 
                     //Ищем совпадения в таблице 
-                    var searchResults = itemsList.Where(item => item.Employees.Name.ToLower().Contains(searchString)).ToList();
+                    var searchResults = itemsList.Where(item => item.Name.ToLower().Contains(searchString)).ToList();
 
                     //Заполняем таблицу записями, где есть совпадения
                     DataGridEmployees.ItemsSource = searchResults.ToList();

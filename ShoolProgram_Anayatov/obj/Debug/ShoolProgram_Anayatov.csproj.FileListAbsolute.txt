@@ -425,3 +425,5 @@ C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\De
 C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\Pages\AddInfoPages\PageAddProviders.baml
 C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\Pages\EditInfoPages\PageEditProduct.g.cs
 C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\Pages\EditInfoPages\PageEditProduct.baml
+C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\Pages\AddInfoPages\PageAddProduct.g.cs
+C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\obj\Debug\Pages\AddInfoPages\PageAddProduct.baml

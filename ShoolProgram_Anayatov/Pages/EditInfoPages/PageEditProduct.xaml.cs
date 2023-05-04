@@ -32,12 +32,19 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
             TxbPurchaseVolue.Text = product.PurchaseVolume.ToString();
             TxbUnit.Text = product.Unit.ToString();
 
+            CmbStatus.DisplayMemberPath = "NameStatus";
+            CmbStatus.SelectedValuePath = "id";
+            CmbStatus.ItemsSource = Connection.DBConnect.StatusProduct.ToList();
+            CmbStatus.Text = product.StatusProduct.NameStatus.ToString();
+
             CmbProvider.DisplayMemberPath = "Name";
             CmbProvider.SelectedValuePath = "id";
             CmbProvider.ItemsSource = Connection.DBConnect.Provider.ToList();
             CmbProvider.Text = product.Provider.Name.ToString();
-         
-           
+
+            
+
+
             CmbTypeOfProduct.DisplayMemberPath = "NameType";
             CmbTypeOfProduct.SelectedValuePath = "id";
             CmbTypeOfProduct.ItemsSource = Connection.DBConnect.TypeOfProduct.ToList();
@@ -49,7 +56,7 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             if (TxbNameProduct.Text == "" || TxbPurchasePrice.Text == "" || TxbPurchaseVolue.Text == "" ||
-                TxbUnit.Text == "" || CmbProvider.Text == "" || CmbTypeOfProduct.Text == "")
+                TxbUnit.Text == "" || CmbProvider.Text == "" || CmbTypeOfProduct.Text == "" || CmbStatus.Text == "")
             {
                 MessageBox.Show("Поля пусты",
                     "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -64,6 +71,7 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
                 product.idProvider = (CmbProvider.SelectedItem as Provider).id;
                 product.NameProduct = TxbNameProduct.Text;
                 product.idTypeOfProduct = (CmbTypeOfProduct.SelectedItem as TypeOfProduct).id;
+                product.idStatusProduct = (CmbStatus.SelectedItem as StatusProduct).id;
                 product.PurchasePrice = TxbPurchasePrice.Text;
                 product.PurchaseVolume = TxbPurchaseVolue.Text;
 

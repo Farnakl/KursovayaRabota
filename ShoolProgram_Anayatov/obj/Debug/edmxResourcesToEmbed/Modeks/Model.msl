@@ -57,6 +57,7 @@
     <EntitySetMapping Name="Product">
       <EntityTypeMapping TypeName="Anayatov_magazineModel.Product">
         <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="idStatusProduct" ColumnName="idStatusProduct" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idProvider" ColumnName="idProvider" />
           <ScalarProperty Name="idTypeOfProduct" ColumnName="idTypeOfProduct" />
@@ -108,6 +109,14 @@
           <ScalarProperty Name="NameType" ColumnName="NameType" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Margin" ColumnName="Margin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusProduct">
+      <EntityTypeMapping TypeName="Anayatov_magazineModel.StatusProduct">
+        <MappingFragment StoreEntitySet="StatusProduct">
+          <ScalarProperty Name="NameStatus" ColumnName="NameStatus" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

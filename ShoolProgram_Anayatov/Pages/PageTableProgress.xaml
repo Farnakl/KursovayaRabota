@@ -16,7 +16,7 @@
 
         <TextBox Name="TxbSearch"
                    Foreground="Gray"
-                   Text="Поиск продуктов"
+                   Text="Поиск сотрудников"
                    Margin="5,0,0,0"
                    Width="120"
                    GotFocus="TxbSearch_GotFocus"

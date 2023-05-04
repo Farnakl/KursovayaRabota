@@ -90,6 +90,12 @@
                             Binding="{Binding PurchasePrice}"
                             Width="*"/>
 
+                <DataGridTextColumn
+                            
+                            Header="Статус"
+                            Binding="{Binding StatusProduct.NameStatus}"
+                            Width="*"/>
+
                 <DataGridTemplateColumn Width="120">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

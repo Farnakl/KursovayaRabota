@@ -35,5 +35,6 @@ namespace ShoolProgram_Anayatov.Modeks
         public virtual DbSet<StatusProvider> StatusProvider { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TypeOfProduct> TypeOfProduct { get; set; }
+        public virtual DbSet<StatusProduct> StatusProduct { get; set; }
     }
 }

@@ -71,6 +71,8 @@
     <NavigationProperty Name="Operation" Relationship="Self.FK_Operation_Product" FromRole="Product" ToRole="Operation" />
     <NavigationProperty Name="Provider" Relationship="Self.FK_Product_Provider" FromRole="Product" ToRole="Provider" />
     <NavigationProperty Name="TypeOfProduct" Relationship="Self.FK_Product_TypeOfProduct" FromRole="Product" ToRole="TypeOfProduct" />
+    <Property Name="idStatusProduct" Type="Int32" />
+    <NavigationProperty Name="StatusProduct" Relationship="Anayatov_magazineModel.FK_Product_StatusProduct" FromRole="Product" ToRole="StatusProduct" />
   </EntityType>
   <EntityType Name="Provider">
     <Key>
@@ -255,5 +257,30 @@
       <End Role="StatusProvider" EntitySet="StatusProvider" />
       <End Role="Provider" EntitySet="Provider" />
     </AssociationSet>
+    <EntitySet Name="StatusProduct" EntityType="Anayatov_magazineModel.StatusProduct" />
+    <AssociationSet Name="FK_Product_StatusProduct" Association="Anayatov_magazineModel.FK_Product_StatusProduct">
+      <End Role="StatusProduct" EntitySet="StatusProduct" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="StatusProduct">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="NameStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="Anayatov_magazineModel.FK_Product_StatusProduct" FromRole="StatusProduct" ToRole="Product" />
+  </EntityType>
+  <Association Name="FK_Product_StatusProduct">
+    <End Type="Anayatov_magazineModel.StatusProduct" Role="StatusProduct" Multiplicity="0..1" />
+    <End Type="Anayatov_magazineModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusProduct">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="idStatusProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

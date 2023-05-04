@@ -23,6 +23,8 @@
         <AssociationConnector Association="Anayatov_magazineModel.FK_Product_Provider" ManuallyRouted="false" />
         <AssociationConnector Association="Anayatov_magazineModel.FK_Product_TypeOfProduct" ManuallyRouted="false" />
         <AssociationConnector Association="Anayatov_magazineModel.FK_Provider_StatusProvider" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Anayatov_magazineModel.StatusProduct" Width="1.5" PointX="7.375" PointY="0.875" />
+        <AssociationConnector Association="Anayatov_magazineModel.FK_Product_StatusProduct" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

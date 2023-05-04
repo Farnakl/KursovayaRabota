@@ -59,6 +59,7 @@
     <Property Name="PurchaseVolume" Type="nvarchar" MaxLength="50" />
     <Property Name="Unit" Type="nvarchar" MaxLength="50" />
     <Property Name="PurchasePrice" Type="nchar" MaxLength="10" />
+    <Property Name="idStatusProduct" Type="int" />
   </EntityType>
   <EntityType Name="Provider">
     <Key>
@@ -73,6 +74,13 @@
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
     <Property Name="PurchaseDate" Type="datetime" />
     <Property Name="idStatusProvider" Type="int" />
+  </EntityType>
+  <EntityType Name="StatusProduct">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="NameStatus" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="StatusProvider">
     <Key>
@@ -172,6 +180,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Product_StatusProduct">
+    <End Role="StatusProduct" Type="Self.StatusProduct" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusProduct">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="idStatusProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Product_TypeOfProduct">
     <End Role="TypeOfProduct" Type="Self.TypeOfProduct" Multiplicity="1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
@@ -204,6 +224,7 @@
     <EntitySet Name="Operation" EntityType="Self.Operation" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Provider" EntityType="Self.Provider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusProduct" EntityType="Self.StatusProduct" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StatusProvider" EntityType="Self.StatusProvider" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeOfProduct" EntityType="Self.TypeOfProduct" Schema="dbo" store:Type="Tables" />
@@ -229,6 +250,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_Product_Provider" Association="Self.FK_Product_Provider">
       <End Role="Provider" EntitySet="Provider" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_StatusProduct" Association="Self.FK_Product_StatusProduct">
+      <End Role="StatusProduct" EntitySet="StatusProduct" />
       <End Role="Product" EntitySet="Product" />
     </AssociationSet>
     <AssociationSet Name="FK_Product_TypeOfProduct" Association="Self.FK_Product_TypeOfProduct">

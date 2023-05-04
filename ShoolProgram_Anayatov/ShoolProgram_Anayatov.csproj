@@ -236,6 +236,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AddInfoPages\PageAddProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AddInfoPages\PageAddProviders.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -335,6 +339,9 @@
     <Compile Include="Modeks\Provider.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modeks\StatusProduct.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modeks\StatusProvider.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -349,6 +356,9 @@
     </Compile>
     <Compile Include="Pages\AddInfoPages\PageAddOperation.xaml.cs">
       <DependentUpon>PageAddOperation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddInfoPages\PageAddProduct.xaml.cs">
+      <DependentUpon>PageAddProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AddInfoPages\PageAddProviders.xaml.cs">
       <DependentUpon>PageAddProviders.xaml</DependentUpon>
