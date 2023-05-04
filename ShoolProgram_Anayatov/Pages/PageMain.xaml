@@ -15,7 +15,7 @@
         <StackPanel>
             <TextBox Width="200" Text="График продаж - покупок "></TextBox>
 
-            <lvc:CartesianChart Background="Black" 
+            <lvc:CartesianChart Background="DarkGreen" 
                                 Height="300" 
                                 Series="{Binding SeriesCollection}" 
                                 LegendLocation="Right" >

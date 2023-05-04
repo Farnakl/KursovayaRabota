@@ -1,5 +1,6 @@
 ﻿using ShoolProgram_Anayatov.Classes;
 using ShoolProgram_Anayatov.Modeks;
+using ShoolProgram_Anayatov.Pages.AddInfoPages;
 using ShoolProgram_Anayatov.Pages.EditInfoPages;
 using System;
 using System.Collections.Generic;
@@ -126,7 +127,7 @@ namespace ShoolProgram_Anayatov.Pages
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            Navigation.frameView.Navigate(new PageAddProduct());
         }
     }
 }
