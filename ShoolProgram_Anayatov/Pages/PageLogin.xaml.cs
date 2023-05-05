@@ -40,7 +40,7 @@ namespace ShoolProgram_Anayatov.Pages
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.frameView.Navigate(new PageMain());
+            Navigation.frameView.Navigate(new PageTable());
         }
     }
 }

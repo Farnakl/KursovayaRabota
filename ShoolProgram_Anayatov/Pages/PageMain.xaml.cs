@@ -5,6 +5,7 @@ using ShoolProgram_Anayatov.Classes;
 using ShoolProgram_Anayatov.Modeks;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -27,25 +28,26 @@ namespace ShoolProgram_Anayatov.Pages
     /// </summary>
     public partial class PageMain : Page
     {
+        
         public SeriesCollection SeriesCollection { get; set; }
         public PageMain()
         {
             InitializeComponent();
 
-
+            
 
             SeriesCollection = new SeriesCollection
 
             {
             new LineSeries
             {
-                Title = "Первый",
-                Values = new ChartValues<double> { 4, 6, 5, 2, 3 }
+                Title = "Продажа",
+                Values = new ChartValues<double> { 554, 255, 655, 1342, 123, 120, 100, 95, 577, 525, 584, 1025, 57, 69, 78, 99, 65 }
             },
             new LineSeries
             {
-                Title = "Второй",
-                Values = new ChartValues<double> {5,2,2,2,2}
+                Title = "Выручка",
+                Values = new ChartValues<double> { 577, 333, 684, 1225, 114, 140, 90, 555, 550, 510, 994, 66, 71, 80, 108, 78, 85 }
             }
 
             
@@ -55,6 +57,14 @@ namespace ShoolProgram_Anayatov.Pages
             DataContext = this;
         }
 
-        
+        private void CartesianChart_Loaded(object sender, RoutedEventArgs e)
+        {
+           List<Series> list = new List<Series>();
+        }
+
+        private void CartesianChart_Loaded_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

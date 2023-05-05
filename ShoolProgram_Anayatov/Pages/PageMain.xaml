@@ -7,7 +7,7 @@
       xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Анализ">
+      Title="График">
 
     <Grid>
         
@@ -15,13 +15,20 @@
         <StackPanel>
             <TextBox Width="200" Text="График продаж - покупок "></TextBox>
 
-            <lvc:CartesianChart Background="DarkGreen" 
-                                Height="300" 
-                                Series="{Binding SeriesCollection}" 
-                                LegendLocation="Right" >
+            <lvc:CartesianChart Height="400"  Series="{Binding SeriesCollection}" Grid.Row="2" Margin="0, 0, 0, 0" Foreground="Black" Zoom="X" Loaded="CartesianChart_Loaded_1">
+                <lvc:CartesianChart.AxisY >
+                    <lvc:Axis  Name="Y" MinValue="{Binding MinimumY}" MaxValue="{Binding MaximumY}" LabelFormatter="{Binding Formatter}">
+                        <lvc:Axis.Sections>
+                            
+                            <lvc:AxisSection Value="{Binding UpperSpecificationLimit}" StrokeThickness="3" Stroke="Black" DataLabel="True" ToolTip="{Binding LowerSpecificationLimitToolTip}"/>
+                            <lvc:AxisSection Value="{Binding NominalConstraint}" StrokeThickness="1.5" Stroke="Black" DataLabel="True" StrokeDashArray="5" ToolTip="{Binding LowerSpecificationLimitToolTip}"/>
+                           
+                        </lvc:Axis.Sections>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisY>
             </lvc:CartesianChart>
 
-             
+
         </StackPanel>
     </Grid>
 </Page>
