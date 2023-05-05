@@ -31,19 +31,22 @@
                 <GroupBox Width="250" Header="ФИО:">
                     <TextBox
                             Name="TxbName"
-                            FontSize="20"/>
+                            FontSize="20"
+                            ToolTip="Иванов Иван Иванович"/>
                 </GroupBox>
 
                 <GroupBox Width="250" Header="Телефон:">
                     <TextBox
                             Name="TxbTelephone"
-                            FontSize="20"/>
+                            FontSize="20"
+                            ToolTip="+79779797"/>
                 </GroupBox>
 
                 <GroupBox Width="250" Header="ИНН:">
                     <TextBox
                             Name="TxbTIN"
-                            FontSize="20"/>
+                            FontSize="20"
+                        ToolTip="000-000-000"/>
                 </GroupBox>
 
             </StackPanel>
@@ -63,13 +66,15 @@
                 <GroupBox Width="250" Header="Адрес проживание:">
                     <TextBox
                             Name="TxbResAddres"
-                            FontSize="20"/>
+                            FontSize="20"
+                        ToolTip="Ул.(название), дом (номер)"/>
                 </GroupBox>
 
                 <GroupBox Width="250" Header="Адрес регистрации:">
                     <TextBox
                             Name="TxbRegAddres"
-                            FontSize="20"/>
+                            FontSize="20"
+                        ToolTip="Ул.(название), дом (номер)"/>
                 </GroupBox>
 
             </StackPanel>
@@ -78,7 +83,8 @@
                 <GroupBox Width="250" Header="Паспорт:">
                     <TextBox
                             Name="TxbPassport"
-                            FontSize="20"/>
+                            FontSize="20"
+                         ToolTip="4757 000000"/>
                 </GroupBox>
 
 
