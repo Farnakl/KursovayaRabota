@@ -32,7 +32,7 @@
                     <TextBox
                             Name="TxbName" 
                             FontSize="20" 
-                        TextChanged="TxbName_TextChanged"
+                       
                         ToolTip="Иванов Иван Иванович"
                         />
                 </GroupBox>

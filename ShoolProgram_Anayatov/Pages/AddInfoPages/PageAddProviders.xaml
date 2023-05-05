@@ -37,7 +37,8 @@
                 <GroupBox Width="300" Header="Адрес:">
                     <TextBox 
                             Name="TxbAddress"
-                            FontSize="20"/>
+                            FontSize="20"
+                            ToolTip="Ул.(название), дом (номер)"/>
                 </GroupBox>
 
 
@@ -45,7 +46,8 @@
                           Header="Банковский счёт:">
                     <TextBox 
                             Name="TxbBankAccont"
-                            FontSize="20"/>
+                            FontSize="20"
+                            ToolTip="Расчётный счёт состоит из 20 цифр: 40817810099910004312"/>
                 </GroupBox>
 
 
@@ -60,19 +62,22 @@
                 <GroupBox Width="300" Header="Телефон:">
                     <TextBox
                             Name="TxbTelephone"
-                            FontSize="20"/>
+                            FontSize="20"
+                            ToolTip="+79779797"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Header= "Email:">
                     <TextBox 
                             Name="TxbEmail"
-                            FontSize="20"/>
+                            FontSize="20"
+                            ToolTip="vkusvull@mail.ru"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Header="ИНН:">
                     <TextBox 
                             Name="TxbINN"
-                            FontSize="20"/>
+                            FontSize="20"
+                            ToolTip="000-000-000"/>
                 </GroupBox>
             </StackPanel>
         </StackPanel>
@@ -81,9 +86,9 @@
             <Button Width="100"
                     Margin="5"
                     HorizontalAlignment="Left"
-                x:Name="BtnBack"
-                Click="BtnBack_Click"
-                Content="Назад"/>
+                    x:Name="BtnBack"
+                    Click="BtnBack_Click"
+                    Content="Назад"/>
 
             <Button Width="100"
                     Margin="5"

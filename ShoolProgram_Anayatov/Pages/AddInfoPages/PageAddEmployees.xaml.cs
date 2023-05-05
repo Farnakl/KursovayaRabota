@@ -98,9 +98,11 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPages
             }
         }
 
-        private void TxbName_TextChanged(object sender, TextChangedEventArgs e)
+        private void TxbName_KeyDown(object sender, TextChangedEventArgs e)
         {
+
            
+            
         }
     }
 }
