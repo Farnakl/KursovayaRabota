@@ -1,12 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Anayatov_magazineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Anayatov_magazineEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Education" EntityType="Anayatov_magazineModel.Education" />
+    <EntitySet Name="Employees" EntityType="Anayatov_magazineModel.Employees" />
+    <EntitySet Name="FamilyStatus" EntityType="Anayatov_magazineModel.FamilyStatus" />
+    <EntitySet Name="JobTitle" EntityType="Anayatov_magazineModel.JobTitle" />
+    <EntitySet Name="Operation" EntityType="Anayatov_magazineModel.Operation" />
+    <EntitySet Name="Product" EntityType="Anayatov_magazineModel.Product" />
+    <EntitySet Name="Provider" EntityType="Anayatov_magazineModel.Provider" />
+    <EntitySet Name="StatusProduct" EntityType="Anayatov_magazineModel.StatusProduct" />
+    <EntitySet Name="StatusProvider" EntityType="Anayatov_magazineModel.StatusProvider" />
+    <EntitySet Name="sysdiagrams" EntityType="Anayatov_magazineModel.sysdiagrams" />
+    <EntitySet Name="TypeOfProduct" EntityType="Anayatov_magazineModel.TypeOfProduct" />
+    <AssociationSet Name="FK_Employees_Education" Association="Anayatov_magazineModel.FK_Employees_Education">
+      <End Role="Education" EntitySet="Education" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employees_FamilyStatus" Association="Anayatov_magazineModel.FK_Employees_FamilyStatus">
+      <End Role="FamilyStatus" EntitySet="FamilyStatus" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employees_JobTitle" Association="Anayatov_magazineModel.FK_Employees_JobTitle">
+      <End Role="JobTitle" EntitySet="JobTitle" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operation_Employees" Association="Anayatov_magazineModel.FK_Operation_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Operation" EntitySet="Operation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operation_Product" Association="Anayatov_magazineModel.FK_Operation_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Operation" EntitySet="Operation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Provider" Association="Anayatov_magazineModel.FK_Product_Provider">
+      <End Role="Provider" EntitySet="Provider" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_StatusProduct" Association="Anayatov_magazineModel.FK_Product_StatusProduct">
+      <End Role="StatusProduct" EntitySet="StatusProduct" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_TypeOfProduct" Association="Anayatov_magazineModel.FK_Product_TypeOfProduct">
+      <End Role="TypeOfProduct" EntitySet="TypeOfProduct" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Provider_StatusProvider" Association="Anayatov_magazineModel.FK_Provider_StatusProvider">
+      <End Role="StatusProvider" EntitySet="StatusProvider" />
+      <End Role="Provider" EntitySet="Provider" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="Education">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" />
     <Property Name="EducationName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Education" FromRole="Education" ToRole="Employees" />
+    <NavigationProperty Name="Employees" Relationship="Anayatov_magazineModel.FK_Employees_Education" FromRole="Education" ToRole="Employees" />
   </EntityType>
   <EntityType Name="Employees">
     <Key>
@@ -23,11 +72,11 @@
     <Property Name="Passport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="idFamilyStatus" Type="Int32" Nullable="false" />
     <Property Name="idEducation" Type="Int32" Nullable="false" />
-    <Property Name="Speciality" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Education" Relationship="Self.FK_Employees_Education" FromRole="Employees" ToRole="Education" />
-    <NavigationProperty Name="FamilyStatus" Relationship="Self.FK_Employees_FamilyStatus" FromRole="Employees" ToRole="FamilyStatus" />
-    <NavigationProperty Name="JobTitle" Relationship="Self.FK_Employees_JobTitle" FromRole="Employees" ToRole="JobTitle" />
-    <NavigationProperty Name="Operation" Relationship="Self.FK_Operation_Employees" FromRole="Employees" ToRole="Operation" />
+    <Property Name="Speciality" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Education" Relationship="Anayatov_magazineModel.FK_Employees_Education" FromRole="Employees" ToRole="Education" />
+    <NavigationProperty Name="FamilyStatus" Relationship="Anayatov_magazineModel.FK_Employees_FamilyStatus" FromRole="Employees" ToRole="FamilyStatus" />
+    <NavigationProperty Name="JobTitle" Relationship="Anayatov_magazineModel.FK_Employees_JobTitle" FromRole="Employees" ToRole="JobTitle" />
+    <NavigationProperty Name="Operation" Relationship="Anayatov_magazineModel.FK_Operation_Employees" FromRole="Employees" ToRole="Operation" />
   </EntityType>
   <EntityType Name="FamilyStatus">
     <Key>
@@ -35,7 +84,7 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_FamilyStatus" FromRole="FamilyStatus" ToRole="Employees" />
+    <NavigationProperty Name="Employees" Relationship="Anayatov_magazineModel.FK_Employees_FamilyStatus" FromRole="FamilyStatus" ToRole="Employees" />
   </EntityType>
   <EntityType Name="JobTitle">
     <Key>
@@ -43,7 +92,7 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_JobTitle" FromRole="JobTitle" ToRole="Employees" />
+    <NavigationProperty Name="Employees" Relationship="Anayatov_magazineModel.FK_Employees_JobTitle" FromRole="JobTitle" ToRole="Employees" />
   </EntityType>
   <EntityType Name="Operation">
     <Key>
@@ -54,25 +103,25 @@
     <Property Name="Quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DateOfsale" Type="DateTime" Precision="0" />
     <Property Name="idEmployees" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Employees" Relationship="Self.FK_Operation_Employees" FromRole="Operation" ToRole="Employees" />
-    <NavigationProperty Name="Product" Relationship="Self.FK_Operation_Product" FromRole="Operation" ToRole="Product" />
+    <NavigationProperty Name="Employees" Relationship="Anayatov_magazineModel.FK_Operation_Employees" FromRole="Operation" ToRole="Employees" />
+    <NavigationProperty Name="Product" Relationship="Anayatov_magazineModel.FK_Operation_Product" FromRole="Operation" ToRole="Product" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idProvider" Type="Int32" Nullable="false" />
     <Property Name="idTypeOfProduct" Type="Int32" Nullable="false" />
     <Property Name="NameProduct" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="PurchaseVolume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="PurchasePrice" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <NavigationProperty Name="Operation" Relationship="Self.FK_Operation_Product" FromRole="Product" ToRole="Operation" />
-    <NavigationProperty Name="Provider" Relationship="Self.FK_Product_Provider" FromRole="Product" ToRole="Provider" />
-    <NavigationProperty Name="TypeOfProduct" Relationship="Self.FK_Product_TypeOfProduct" FromRole="Product" ToRole="TypeOfProduct" />
     <Property Name="idStatusProduct" Type="Int32" />
+    <NavigationProperty Name="Operation" Relationship="Anayatov_magazineModel.FK_Operation_Product" FromRole="Product" ToRole="Operation" />
+    <NavigationProperty Name="Provider" Relationship="Anayatov_magazineModel.FK_Product_Provider" FromRole="Product" ToRole="Provider" />
     <NavigationProperty Name="StatusProduct" Relationship="Anayatov_magazineModel.FK_Product_StatusProduct" FromRole="Product" ToRole="StatusProduct" />
+    <NavigationProperty Name="TypeOfProduct" Relationship="Anayatov_magazineModel.FK_Product_TypeOfProduct" FromRole="Product" ToRole="TypeOfProduct" />
   </EntityType>
   <EntityType Name="Provider">
     <Key>
@@ -87,8 +136,16 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
     <Property Name="idStatusProvider" Type="Int32" />
-    <NavigationProperty Name="Product" Relationship="Self.FK_Product_Provider" FromRole="Provider" ToRole="Product" />
-    <NavigationProperty Name="StatusProvider" Relationship="Self.FK_Provider_StatusProvider" FromRole="Provider" ToRole="StatusProvider" />
+    <NavigationProperty Name="Product" Relationship="Anayatov_magazineModel.FK_Product_Provider" FromRole="Provider" ToRole="Product" />
+    <NavigationProperty Name="StatusProvider" Relationship="Anayatov_magazineModel.FK_Provider_StatusProvider" FromRole="Provider" ToRole="StatusProvider" />
+  </EntityType>
+  <EntityType Name="StatusProduct">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="NameStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="Anayatov_magazineModel.FK_Product_StatusProduct" FromRole="StatusProduct" ToRole="Product" />
   </EntityType>
   <EntityType Name="StatusProvider">
     <Key>
@@ -96,13 +153,13 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Provider" Relationship="Self.FK_Provider_StatusProvider" FromRole="StatusProvider" ToRole="Provider" />
+    <NavigationProperty Name="Provider" Relationship="Anayatov_magazineModel.FK_Provider_StatusProvider" FromRole="StatusProvider" ToRole="Provider" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Name="principal_id" Type="Int32" Nullable="false" />
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
@@ -116,11 +173,11 @@
     <Property Name="NameType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Margin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Product" Relationship="Self.FK_Product_TypeOfProduct" FromRole="TypeOfProduct" ToRole="Product" />
+    <NavigationProperty Name="Product" Relationship="Anayatov_magazineModel.FK_Product_TypeOfProduct" FromRole="TypeOfProduct" ToRole="Product" />
   </EntityType>
   <Association Name="FK_Employees_Education">
-    <End Role="Education" Type="Self.Education" Multiplicity="1" />
-    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <End Type="Anayatov_magazineModel.Education" Role="Education" Multiplicity="1" />
+    <End Type="Anayatov_magazineModel.Employees" Role="Employees" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Education">
         <PropertyRef Name="id" />
@@ -131,8 +188,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Employees_FamilyStatus">
-    <End Role="FamilyStatus" Type="Self.FamilyStatus" Multiplicity="1" />
-    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <End Type="Anayatov_magazineModel.FamilyStatus" Role="FamilyStatus" Multiplicity="1" />
+    <End Type="Anayatov_magazineModel.Employees" Role="Employees" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="FamilyStatus">
         <PropertyRef Name="id" />
@@ -143,8 +200,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Employees_JobTitle">
-    <End Role="JobTitle" Type="Self.JobTitle" Multiplicity="1" />
-    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <End Type="Anayatov_magazineModel.JobTitle" Role="JobTitle" Multiplicity="1" />
+    <End Type="Anayatov_magazineModel.Employees" Role="Employees" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="JobTitle">
         <PropertyRef Name="id" />
@@ -155,8 +212,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Operation_Employees">
-    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
-    <End Role="Operation" Type="Self.Operation" Multiplicity="*" />
+    <End Type="Anayatov_magazineModel.Employees" Role="Employees" Multiplicity="1" />
+    <End Type="Anayatov_magazineModel.Operation" Role="Operation" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Employees">
         <PropertyRef Name="id" />
@@ -167,8 +224,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Operation_Product">
-    <End Role="Product" Type="Self.Product" Multiplicity="1" />
-    <End Role="Operation" Type="Self.Operation" Multiplicity="*" />
+    <End Type="Anayatov_magazineModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="Anayatov_magazineModel.Operation" Role="Operation" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Product">
         <PropertyRef Name="id" />
@@ -179,8 +236,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Product_Provider">
-    <End Role="Provider" Type="Self.Provider" Multiplicity="1" />
-    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <End Type="Anayatov_magazineModel.Provider" Role="Provider" Multiplicity="1" />
+    <End Type="Anayatov_magazineModel.Product" Role="Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Provider">
         <PropertyRef Name="id" />
@@ -190,9 +247,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Product_StatusProduct">
+    <End Type="Anayatov_magazineModel.StatusProduct" Role="StatusProduct" Multiplicity="0..1" />
+    <End Type="Anayatov_magazineModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusProduct">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="idStatusProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Product_TypeOfProduct">
-    <End Role="TypeOfProduct" Type="Self.TypeOfProduct" Multiplicity="1" />
-    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <End Type="Anayatov_magazineModel.TypeOfProduct" Role="TypeOfProduct" Multiplicity="1" />
+    <End Type="Anayatov_magazineModel.Product" Role="Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TypeOfProduct">
         <PropertyRef Name="id" />
@@ -203,83 +272,14 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Provider_StatusProvider">
-    <End Role="StatusProvider" Type="Self.StatusProvider" Multiplicity="0..1" />
-    <End Role="Provider" Type="Self.Provider" Multiplicity="*" />
+    <End Type="Anayatov_magazineModel.StatusProvider" Role="StatusProvider" Multiplicity="0..1" />
+    <End Type="Anayatov_magazineModel.Provider" Role="Provider" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="StatusProvider">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="Provider">
         <PropertyRef Name="idStatusProvider" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityContainer Name="Anayatov_magazineEntities3" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Education" EntityType="Self.Education" />
-    <EntitySet Name="Employees" EntityType="Self.Employees" />
-    <EntitySet Name="FamilyStatus" EntityType="Self.FamilyStatus" />
-    <EntitySet Name="JobTitle" EntityType="Self.JobTitle" />
-    <EntitySet Name="Operation" EntityType="Self.Operation" />
-    <EntitySet Name="Product" EntityType="Self.Product" />
-    <EntitySet Name="Provider" EntityType="Self.Provider" />
-    <EntitySet Name="StatusProvider" EntityType="Self.StatusProvider" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="TypeOfProduct" EntityType="Self.TypeOfProduct" />
-    <AssociationSet Name="FK_Employees_Education" Association="Self.FK_Employees_Education">
-      <End Role="Education" EntitySet="Education" />
-      <End Role="Employees" EntitySet="Employees" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Employees_FamilyStatus" Association="Self.FK_Employees_FamilyStatus">
-      <End Role="FamilyStatus" EntitySet="FamilyStatus" />
-      <End Role="Employees" EntitySet="Employees" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Employees_JobTitle" Association="Self.FK_Employees_JobTitle">
-      <End Role="JobTitle" EntitySet="JobTitle" />
-      <End Role="Employees" EntitySet="Employees" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Operation_Employees" Association="Self.FK_Operation_Employees">
-      <End Role="Employees" EntitySet="Employees" />
-      <End Role="Operation" EntitySet="Operation" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Operation_Product" Association="Self.FK_Operation_Product">
-      <End Role="Product" EntitySet="Product" />
-      <End Role="Operation" EntitySet="Operation" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Product_Provider" Association="Self.FK_Product_Provider">
-      <End Role="Provider" EntitySet="Provider" />
-      <End Role="Product" EntitySet="Product" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Product_TypeOfProduct" Association="Self.FK_Product_TypeOfProduct">
-      <End Role="TypeOfProduct" EntitySet="TypeOfProduct" />
-      <End Role="Product" EntitySet="Product" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Provider_StatusProvider" Association="Self.FK_Provider_StatusProvider">
-      <End Role="StatusProvider" EntitySet="StatusProvider" />
-      <End Role="Provider" EntitySet="Provider" />
-    </AssociationSet>
-    <EntitySet Name="StatusProduct" EntityType="Anayatov_magazineModel.StatusProduct" />
-    <AssociationSet Name="FK_Product_StatusProduct" Association="Anayatov_magazineModel.FK_Product_StatusProduct">
-      <End Role="StatusProduct" EntitySet="StatusProduct" />
-      <End Role="Product" EntitySet="Product" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="StatusProduct">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="NameStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Product" Relationship="Anayatov_magazineModel.FK_Product_StatusProduct" FromRole="StatusProduct" ToRole="Product" />
-  </EntityType>
-  <Association Name="FK_Product_StatusProduct">
-    <End Type="Anayatov_magazineModel.StatusProduct" Role="StatusProduct" Multiplicity="0..1" />
-    <End Type="Anayatov_magazineModel.Product" Role="Product" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="StatusProduct">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Product">
-        <PropertyRef Name="idStatusProduct" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -32,7 +32,7 @@ namespace ShoolProgram_Anayatov.Modeks
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Operation> Operation { get; set; }
         public virtual Provider Provider { get; set; }
-        public virtual TypeOfProduct TypeOfProduct { get; set; }
         public virtual StatusProduct StatusProduct { get; set; }
+        public virtual TypeOfProduct TypeOfProduct { get; set; }
     }
 }

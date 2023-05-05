@@ -32,9 +32,9 @@ namespace ShoolProgram_Anayatov.Modeks
         public virtual DbSet<Operation> Operation { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Provider> Provider { get; set; }
+        public virtual DbSet<StatusProduct> StatusProduct { get; set; }
         public virtual DbSet<StatusProvider> StatusProvider { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TypeOfProduct> TypeOfProduct { get; set; }
-        public virtual DbSet<StatusProduct> StatusProduct { get; set; }
     }
 }

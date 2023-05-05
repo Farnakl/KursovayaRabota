@@ -52,7 +52,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idProvider" Type="int" Nullable="false" />
     <Property Name="idTypeOfProduct" Type="int" Nullable="false" />
     <Property Name="NameProduct" Type="nvarchar" MaxLength="50" />
