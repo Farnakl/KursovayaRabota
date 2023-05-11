@@ -10,7 +10,7 @@ namespace ShoolProgram_Anayatov.Classes
     public static class DataGridLoaded
     {
      
-        public static Anayatov_magazineEntities3 DataGridLoad { get; set; }
+        public static Anayatov_magazineEntities DataGridLoad { get; set; }
         
         
     }

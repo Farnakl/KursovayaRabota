@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ShoolProgram_Anayatov.Pages.EditInfoPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Изменение операции">
+      Title="Редактирование операции">
 
     <Grid>
         <Grid.RowDefinitions>

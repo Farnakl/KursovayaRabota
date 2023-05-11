@@ -8,7 +8,7 @@ namespace ShoolProgram_Anayatov.Modeks
 {
     internal class Connection
     {
-        public static Anayatov_magazineEntities3 DBConnect = new Anayatov_magazineEntities3();
+        public static Anayatov_magazineEntities DBConnect = new Anayatov_magazineEntities();
 
     }
 }

@@ -72,7 +72,7 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
             else
             {
 
-                Anayatov_magazineEntities3 context = new Anayatov_magazineEntities3();
+                Anayatov_magazineEntities context = new Anayatov_magazineEntities();
                 var employees = context.Employees.Where(c => c.id == employeesId).FirstOrDefault();
 
                 employees.Name = TxbName.Text;

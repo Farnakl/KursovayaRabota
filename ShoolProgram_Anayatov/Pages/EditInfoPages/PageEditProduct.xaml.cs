@@ -30,7 +30,11 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
             TxbNameProduct.Text = product.NameProduct.ToString();
             TxbPurchasePrice.Text = product.PurchasePrice.ToString();
             TxbPurchaseVolue.Text = product.PurchaseVolume.ToString();
-            TxbUnit.Text = product.Unit.ToString();
+
+            CmbUnit.DisplayMemberPath = "NameUnit";
+            CmbUnit.SelectedValuePath = "id";
+            CmbUnit.ItemsSource = Connection.DBConnect.Unit.ToList();
+            CmbUnit.Text = product.Unit.NameUnit.ToString();
 
             CmbStatus.DisplayMemberPath = "NameStatus";
             CmbStatus.SelectedValuePath = "id";
@@ -56,7 +60,7 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             if (TxbNameProduct.Text == "" || TxbPurchasePrice.Text == "" || TxbPurchaseVolue.Text == "" ||
-                TxbUnit.Text == "" || CmbProvider.Text == "" || CmbTypeOfProduct.Text == "" || CmbStatus.Text == "")
+                CmbUnit.Text == "" || CmbProvider.Text == "" || CmbTypeOfProduct.Text == "" || CmbStatus.Text == "")
             {
                 MessageBox.Show("Поля пусты",
                     "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -64,10 +68,10 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
             else
             {
 
-                Anayatov_magazineEntities3 context = new Anayatov_magazineEntities3();
+                Anayatov_magazineEntities context = new Anayatov_magazineEntities();
                 var product = context.Product.Where(c => c.id == productId).FirstOrDefault();
 
-                product.Unit = TxbUnit.Text;
+                product.idUnit = (CmbUnit.SelectedItem as Unit).id;
                 product.idProvider = (CmbProvider.SelectedItem as Provider).id;
                 product.NameProduct = TxbNameProduct.Text;
                 product.idTypeOfProduct = (CmbTypeOfProduct.SelectedItem as TypeOfProduct).id;

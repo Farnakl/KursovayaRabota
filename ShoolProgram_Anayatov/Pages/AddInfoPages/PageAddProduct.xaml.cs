@@ -39,13 +39,17 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPages
             CmbProvider.DisplayMemberPath = "Name";
             CmbProvider.SelectedValuePath = "id";
             CmbProvider.ItemsSource = Connection.DBConnect.Provider.ToList();
+
+            CmbUnit.DisplayMemberPath = "NameUnit";
+            CmbUnit.SelectedValuePath = "id";
+            CmbUnit.ItemsSource = Connection.DBConnect.Unit.ToList();
          
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             if (TxbNameProduct.Text == "" || TxbPurchasePrice.Text == "" || TxbPurchaseVolue.Text == "" ||
-                TxbUnit.Text == "" || CmbProvider.Text == "" || CmbTypeOfProduct.Text == "" || CmbStatus.Text == "")
+                CmbUnit.Text == "" || CmbProvider.Text == "" || CmbTypeOfProduct.Text == "" || CmbStatus.Text == "")
             {
                 MessageBox.Show("Поля пусты",
                     "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -59,7 +63,7 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPages
                         NameProduct = TxbNameProduct.Text,
                         PurchasePrice = TxbPurchasePrice.Text,
                         PurchaseVolume = TxbPurchaseVolue.Text,
-                        Unit = TxbUnit.Text,
+                        Unit = CmbUnit.SelectedItem as Unit,
                         Provider = CmbProvider.SelectedItem as Provider,
                         TypeOfProduct = CmbTypeOfProduct.SelectedItem as TypeOfProduct,
                         StatusProduct = CmbStatus.SelectedItem as StatusProduct,

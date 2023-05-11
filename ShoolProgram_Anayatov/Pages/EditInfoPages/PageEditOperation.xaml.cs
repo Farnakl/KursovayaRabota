@@ -61,7 +61,7 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
             else
             {
                 
-                    Anayatov_magazineEntities3 context = new Anayatov_magazineEntities3();
+                    Anayatov_magazineEntities context = new Anayatov_magazineEntities();
                     var operation = context.Operation.Where(c => c.id == operationId).FirstOrDefault();
 
                     operation.Quantity = TxbQuantity.Text;

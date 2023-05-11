@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ShoolProgram_Anayatov.Pages.AddInfoPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageAddProviders">
+      Title="Добавление поставщика">
 
     <Grid>
         <Grid.RowDefinitions>

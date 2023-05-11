@@ -11,10 +11,10 @@ false
 DEBUG;TRACE
 C:\Users\student\Documents\anayatov\KursovayaRabota\ShoolProgram_Anayatov\App.xaml
 191899416660
-2849482887
-411449228720
+21661074417
+41480771294
 162-1868250999
 MainWindow.xaml;Pages\AddInfoPages\PageAddEmployees.xaml;Pages\AddInfoPages\PageAddOperation.xaml;Pages\AddInfoPages\PageAddProduct.xaml;Pages\AddInfoPages\PageAddProviders.xaml;Pages\EditInfoPages\PageEditEmployees.xaml;Pages\EditInfoPages\PageEditOperation.xaml;Pages\EditInfoPages\PageEditProduct.xaml;Pages\EditInfoPages\PageEditProvider.xaml;Pages\Menus\PageMenu.xaml;Pages\PageShowProviders.xaml;Pages\PageEditStudent.xaml;Pages\PageLogin.xaml;Pages\PageMain.xaml;Pages\PageProviders.xaml;Pages\PageTable.xaml;Pages\PageTableProgress.xaml;Pages\PageTableTeachers.xaml;Pages\ShowProviderInfo.xaml;
 
-True
+False
 

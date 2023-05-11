@@ -81,7 +81,7 @@
                 <DataGridTextColumn
                             
                             Header="Единица измерения"
-                            Binding="{Binding Unit}"
+                            Binding="{Binding Unit.NameUnit}"
                             Width="*"/>
 
                 <DataGridTextColumn

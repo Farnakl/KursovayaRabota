@@ -57,9 +57,9 @@
     <EntitySetMapping Name="Product">
       <EntityTypeMapping TypeName="Anayatov_magazineModel.Product">
         <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="idUnit" ColumnName="idUnit" />
           <ScalarProperty Name="idStatusProduct" ColumnName="idStatusProduct" />
           <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
-          <ScalarProperty Name="Unit" ColumnName="Unit" />
           <ScalarProperty Name="PurchaseVolume" ColumnName="PurchaseVolume" />
           <ScalarProperty Name="NameProduct" ColumnName="NameProduct" />
           <ScalarProperty Name="idTypeOfProduct" ColumnName="idTypeOfProduct" />
@@ -120,5 +120,37 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Unit">
+      <EntityTypeMapping TypeName="Anayatov_magazineModel.Unit">
+        <MappingFragment StoreEntitySet="Unit">
+          <ScalarProperty Name="NameUnit" ColumnName="NameUnit" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище Anayatov_magazineModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище Anayatov_magazineModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище Anayatov_magazineModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище Anayatov_magazineModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Anayatov_magazineModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище Anayatov_magazineModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Anayatov_magazineModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище Anayatov_magazineModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище Anayatov_magazineModel.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

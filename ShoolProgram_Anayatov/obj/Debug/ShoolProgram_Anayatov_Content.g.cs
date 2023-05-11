@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modeks/model.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modeks/model.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modeks/model1.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modeks/model1.tt")]
 
 

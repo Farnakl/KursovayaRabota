@@ -25,7 +25,7 @@ namespace ShoolProgram_Anayatov.Modeks
         public int idTypeOfProduct { get; set; }
         public string NameProduct { get; set; }
         public string PurchaseVolume { get; set; }
-        public string Unit { get; set; }
+        public int idUnit { get; set; }
         public string PurchasePrice { get; set; }
         public Nullable<int> idStatusProduct { get; set; }
     
@@ -34,5 +34,6 @@ namespace ShoolProgram_Anayatov.Modeks
         public virtual Provider Provider { get; set; }
         public virtual StatusProduct StatusProduct { get; set; }
         public virtual TypeOfProduct TypeOfProduct { get; set; }
+        public virtual Unit Unit { get; set; }
     }
 }

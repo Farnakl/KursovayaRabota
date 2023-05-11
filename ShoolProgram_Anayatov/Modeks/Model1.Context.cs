@@ -13,10 +13,10 @@ namespace ShoolProgram_Anayatov.Modeks
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Anayatov_magazineEntities3 : DbContext
+    public partial class Anayatov_magazineEntities : DbContext
     {
-        public Anayatov_magazineEntities3()
-            : base("name=Anayatov_magazineEntities3")
+        public Anayatov_magazineEntities()
+            : base("name=Anayatov_magazineEntities")
         {
         }
     
@@ -36,5 +36,6 @@ namespace ShoolProgram_Anayatov.Modeks
         public virtual DbSet<StatusProvider> StatusProvider { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TypeOfProduct> TypeOfProduct { get; set; }
+        public virtual DbSet<Unit> Unit { get; set; }
     }
 }
