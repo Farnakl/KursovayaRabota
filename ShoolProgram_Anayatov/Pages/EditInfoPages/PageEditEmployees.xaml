@@ -41,7 +41,8 @@
                             Name="TxbTelephone"
                             FontSize="20"
                             ToolTip="+79779797"
-                            MaxLength="12"/>
+                            MaxLength="12"
+                            PreviewTextInput="TxbTelephone_PreviewTextInput"/>
                 </GroupBox>
 
                 <GroupBox Width="250" Header="ИНН:">
@@ -49,7 +50,8 @@
                             Name="TxbTIN"
                             FontSize="20"
                             ToolTip="000-000-000"
-                            MaxLength="11"/>
+                            MaxLength="11"
+                            PreviewTextInput="TxbTIN_PreviewTextInput"/>
                 </GroupBox>
 
             </StackPanel>
@@ -91,7 +93,8 @@
                             Name="TxbPassport"
                             FontSize="20"
                             ToolTip="4757 000000"
-                            MaxLength="11"/>
+                            MaxLength="11"
+                            PreviewTextInput="TxbPassport_PreviewTextInput"/>
                 </GroupBox>
 
 

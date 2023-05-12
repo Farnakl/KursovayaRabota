@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -90,7 +91,11 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPage
 
         private void TxbQuantity_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-
+            string pattern = @"[^0-9+-,.]+";
+            if (Regex.IsMatch(e.Text, pattern))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

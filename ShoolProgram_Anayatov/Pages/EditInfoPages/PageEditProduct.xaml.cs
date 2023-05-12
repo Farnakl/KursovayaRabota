@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -93,9 +94,22 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
             Navigation.frameView.GoBack();
         }
 
-        private void TxbPurchaseVolue_PreviewTextInput()
+        private void TxbPurchaseVolue_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
+            string pattern = @"[^0-9+-,.]+";
+            if (Regex.IsMatch(e.Text, pattern))
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void TxbPurchasePrice_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string pattern = @"[^0-9+-,.]+";
+            if (Regex.IsMatch(e.Text, pattern))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

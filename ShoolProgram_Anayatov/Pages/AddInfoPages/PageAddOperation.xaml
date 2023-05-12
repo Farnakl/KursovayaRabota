@@ -32,7 +32,8 @@
                     <TextBox
                             Name="TxbQuantity"
                             FontSize="20"
-                            MaxLength="11"/>
+                            MaxLength="11"
+                            PreviewTextInput="TxbQuantity_PreviewTextInput"/>
                 </GroupBox>
 
 

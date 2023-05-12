@@ -105,13 +105,33 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPages
             
         }
 
-        private void TxbTelephone_TextInput(object sender, TextChangedEventArgs e)
-        {
-            
+        
 
-           
+        private void TxbTelephone_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string pattern = @"[^0-9+-,.]+";
+            if (Regex.IsMatch(e.Text, pattern))
+            {
+                e.Handled = true;
+            }
         }
 
-       
+        private void TxbTIN_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string pattern = @"[^0-9+-,.]+";
+            if (Regex.IsMatch(e.Text, pattern))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxbPassport_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string pattern = @"[^0-9+-,.]+";
+            if (Regex.IsMatch(e.Text, pattern))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

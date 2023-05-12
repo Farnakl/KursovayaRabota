@@ -41,12 +41,12 @@ namespace ShoolProgram_Anayatov.Pages
             {
             new LineSeries
             {
-                Title = "Продажа",
+                Title = "Покупка",
                 Values = new ChartValues<double> { 554, 255, 655, 1342, 123, 120, 100, 95, 577, 525, 584, 1025, 57, 69, 78, 99, 65 }
             },
             new LineSeries
             {
-                Title = "Выручка",
+                Title = "Продажа",
                 Values = new ChartValues<double> { 577, 333, 684, 1225, 114, 140, 90, 555, 550, 510, 994, 66, 71, 80, 108, 78, 85 }
             }
 

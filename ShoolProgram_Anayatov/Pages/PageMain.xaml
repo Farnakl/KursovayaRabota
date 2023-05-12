@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel>
-            <TextBox Width="200" Height="30" Text="График продаж - выручка "></TextBox>
+            <TextBox Width="200" Height="30" Text="График продаж - покупок "></TextBox>
 
             <lvc:CartesianChart Height="500" Foreground="Black" Series="{Binding SeriesCollection}" Grid.Row="2" Margin="0, 0, 0, 0"  Zoom="X" Loaded="CartesianChart_Loaded_1">
                 <lvc:CartesianChart.AxisY >

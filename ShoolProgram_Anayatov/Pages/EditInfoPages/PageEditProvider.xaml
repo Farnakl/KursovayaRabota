@@ -48,7 +48,8 @@
                     <TextBox 
                             Name="TxbBankAccont"
                             FontSize="20"
-                            MaxLength="20"/>
+                            MaxLength="20"
+                            PreviewTextInput="TxbBankAccont_PreviewTextInput"/>
                 </GroupBox>
 
 
@@ -64,7 +65,8 @@
                     <TextBox
                             Name="TxbTelephone"
                             FontSize="20"
-                            MaxLength="12"/>
+                            MaxLength="12"
+                            PreviewTextInput="TxbTelephone_PreviewTextInput"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Header= "Email:">
@@ -77,7 +79,8 @@
                     <TextBox 
                             Name="TxbINN"
                             FontSize="20"
-                            MaxLength="11"/>
+                            MaxLength="11"
+                            PreviewTextInput="TxbINN_PreviewTextInput"/>
                 </GroupBox>
             </StackPanel>
         </StackPanel>

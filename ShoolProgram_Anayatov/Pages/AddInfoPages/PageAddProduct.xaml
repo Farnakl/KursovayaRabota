@@ -56,13 +56,15 @@
                     <TextBox 
                             Name="TxbPurchaseVolue"
                             FontSize="20"
-                            MaxLength="11"/>
+                            MaxLength="11"
+                            PreviewTextInput="TxbPurchaseVolue_PreviewTextInput"/>
                 </GroupBox>
                 <GroupBox Width="300" Header="Цена покупки">
                     <TextBox 
                             Name="TxbPurchasePrice"
                             FontSize="20"
-                            MaxLength="11"/>
+                            MaxLength="11"
+                            PreviewTextInput="TxbPurchasePrice_PreviewTextInput"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Height="90"

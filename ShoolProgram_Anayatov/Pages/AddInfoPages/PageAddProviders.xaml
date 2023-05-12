@@ -50,6 +50,7 @@
                             Name="TxbBankAccont"
                             FontSize="20"
                             MaxLength="20"
+                            PreviewTextInput="TxbBankAccont_PreviewTextInput"
                             ToolTip="Расчётный счёт состоит из 20 цифр: 40817810099910004312"/>
                 </GroupBox>
 
@@ -67,7 +68,8 @@
                             Name="TxbTelephone"
                             FontSize="20"
                             ToolTip="+79779797"
-                            MaxLength="12"/>
+                            MaxLength="12"
+                            PreviewTextInput="TxbTelephone_PreviewTextInput"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Header= "Email:">
@@ -83,7 +85,8 @@
                             Name="TxbINN"
                             FontSize="20"
                             ToolTip="000-000-000"
-                            MaxLength="11"/>
+                            MaxLength="11"
+                            PreviewTextInput="TxbINN_PreviewTextInput"/>
                 </GroupBox>
             </StackPanel>
         </StackPanel>
