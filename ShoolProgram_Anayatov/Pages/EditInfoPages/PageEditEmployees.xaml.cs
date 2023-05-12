@@ -95,5 +95,10 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
             }
 
         }
+
+        private void TxbTelephone_PreviewTextInput()
+        {
+
+        }
     }
 }

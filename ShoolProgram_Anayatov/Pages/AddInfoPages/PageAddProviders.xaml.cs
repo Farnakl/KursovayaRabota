@@ -84,5 +84,10 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPages
             {
                 Navigation.frameView.GoBack();
             }
+
+        private void TxbBankAccont_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+
+        }
     }
 }

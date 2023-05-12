@@ -92,5 +92,10 @@ namespace ShoolProgram_Anayatov.Pages.EditInfoPages
         {
             Navigation.frameView.GoBack();
         }
+
+        private void TxbPurchaseVolue_PreviewTextInput()
+        {
+
+        }
     }
 }

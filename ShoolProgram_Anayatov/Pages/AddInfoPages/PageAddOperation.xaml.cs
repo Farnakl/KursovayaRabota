@@ -87,5 +87,10 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPage
 
             }
         }
+
+        private void TxbQuantity_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+
+        }
     }
 }
