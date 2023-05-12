@@ -30,7 +30,8 @@
                           Header="Название предприятия:">
                     <TextBox 
                             Name="TxbName"
-                            FontSize="20"/>
+                            FontSize="20"
+                            MaxLength="41"/>
                 </GroupBox>
 
 
@@ -38,7 +39,8 @@
                     <TextBox 
                             Name="TxbAddress"
                             FontSize="20"
-                            ToolTip="Ул.(название), дом (номер)"/>
+                            ToolTip="Ул.(название), дом (номер)"
+                            MaxLength="40"/>
                 </GroupBox>
 
 
@@ -47,6 +49,7 @@
                     <TextBox 
                             Name="TxbBankAccont"
                             FontSize="20"
+                            MaxLength="20"
                             ToolTip="Расчётный счёт состоит из 20 цифр: 40817810099910004312"/>
                 </GroupBox>
 
@@ -63,21 +66,24 @@
                     <TextBox
                             Name="TxbTelephone"
                             FontSize="20"
-                            ToolTip="+79779797"/>
+                            ToolTip="+79779797"
+                            MaxLength="12"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Header= "Email:">
                     <TextBox 
                             Name="TxbEmail"
                             FontSize="20"
-                            ToolTip="vkusvull@mail.ru"/>
+                            ToolTip="vkusvull@mail.ru"
+                            MaxLength="40"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Header="ИНН:">
                     <TextBox 
                             Name="TxbINN"
                             FontSize="20"
-                            ToolTip="000-000-000"/>
+                            ToolTip="000-000-000"
+                            MaxLength="11"/>
                 </GroupBox>
             </StackPanel>
         </StackPanel>

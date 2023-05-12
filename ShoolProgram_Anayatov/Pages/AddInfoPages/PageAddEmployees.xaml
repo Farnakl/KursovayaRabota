@@ -32,8 +32,8 @@
                     <TextBox
                             Name="TxbName" 
                             FontSize="20" 
-                       
-                        ToolTip="Иванов Иван Иванович"
+                            ToolTip="Иванов Иван Иванович"
+                            MaxLength="20"
                         />
                 </GroupBox>
 
@@ -41,14 +41,16 @@
                     <TextBox
                             Name="TxbTelephone"
                             FontSize="20"
-                            ToolTip="+79779797"/>
+                            ToolTip="+79779797"
+                            MaxLength="11"/>
                 </GroupBox>
 
                 <GroupBox Width="250" Header="ИНН:">
                     <TextBox
                             Name="TxbTIN"
                             FontSize="20"
-                            ToolTip="000-000-000"/>
+                            ToolTip="000-000-000"
+                            MaxLength="11"/>
                 </GroupBox>
 
             </StackPanel>
@@ -69,6 +71,7 @@
                     <TextBox
                             Name="TxbResAddres"
                             FontSize="20"
+                            MaxLength="40"
                             ToolTip="Ул.(название), дом (номер)"/>
                 </GroupBox>
 
@@ -76,6 +79,7 @@
                     <TextBox
                             Name="TxbRegAddres"
                             FontSize="20"
+                            MaxLength="40"
                             ToolTip="Ул.(название), дом (номер)"/>
                 </GroupBox>
 
@@ -86,7 +90,8 @@
                     <TextBox
                             Name="TxbPassport"
                             FontSize="20"
-                            ToolTip="4757 000000"/>
+                            ToolTip="4757 000000"
+                            MaxLength="11"/>
                 </GroupBox>
                 
 

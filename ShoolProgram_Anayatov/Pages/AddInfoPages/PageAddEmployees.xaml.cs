@@ -104,5 +104,14 @@ namespace ShoolProgram_Anayatov.Pages.AddInfoPages
            
             
         }
+
+        private void TxbTelephone_TextInput(object sender, TextChangedEventArgs e)
+        {
+            
+
+           
+        }
+
+       
     }
 }

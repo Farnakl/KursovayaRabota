@@ -31,10 +31,11 @@
                 </GroupBox>
 
 
-                <GroupBox Width="300" Header="Название организации:">
+                <GroupBox Width="300" Header="Название продукта:">
                     <TextBox 
                             Name="TxbNameProduct"
-                            FontSize="20"/>
+                            FontSize="20"
+                            MaxLength="11"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Header="Единица измерения">
@@ -54,12 +55,14 @@
                 <GroupBox Width="300" Header="Количество покупки">
                     <TextBox 
                             Name="TxbPurchaseVolue"
-                            FontSize="20"/>
+                            FontSize="20"
+                            MaxLength="11"/>
                 </GroupBox>
                 <GroupBox Width="300" Header="Цена покупки">
                     <TextBox 
                             Name="TxbPurchasePrice"
-                            FontSize="20"/>
+                            FontSize="20"
+                            MaxLength="11"/>
                 </GroupBox>
 
                 <GroupBox Width="300" Height="90"

@@ -42,7 +42,8 @@
                 <GroupBox Width="300" Header="Паспорт:">
                     <TextBlock 
                             Name="TxbPassport"
-                            FontSize="20"/>
+                            FontSize="20"
+                        />
                 </GroupBox>
             </StackPanel>
 

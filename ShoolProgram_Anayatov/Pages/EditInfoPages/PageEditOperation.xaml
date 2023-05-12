@@ -31,7 +31,8 @@
                 <GroupBox Width="300" Header="Количество:">
                     <TextBox 
                             Name="TxbQuantity"
-                            FontSize="20"/>
+                            FontSize="20"
+                            MaxLength="11"/>
                 </GroupBox>
 
 
